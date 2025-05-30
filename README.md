@@ -2,6 +2,7 @@
 
 We have to install React, FontAwesomeIcon - faPlayIcon, faTimes, faFileIcon to run the code.
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+I made this Interactive Module Viewer on the topic Electric Machines. 
 
 ### Node.js & `npm install`
 
