@@ -8,7 +8,7 @@ const App = () => {
     "Week 1 - DC Machines": [
       { title: "Introduction to Electric Motors", type: "article", url: "https://www.electricaltechnology.org/2020/04/dc-machine-types-working-applications.html" },
       { title: "DC Motors", type: "video", url: "https://www.youtube.com/embed/CWulQ1ZSE3c" },
-      { title: "DC Generators", type: "video", url: "https://www.youtube.com/embed/W6NZfCO5SIk" }
+      { title: "DC Generators", type: "video", url: "https://www.youtube.com/embed/mq2zjmS8UMI" }
     ],
     "Week 2 - Induction Machines": [
       { title: "Introduction to Induction Machines", type: "article", url: "https://www.mangoengineer.in/2020/11/induction-machine.html" },
