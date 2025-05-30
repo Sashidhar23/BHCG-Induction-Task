@@ -5,7 +5,7 @@ npm install installs all the dependencies.
 npm install @fortawesome/react-fontawesome @fortawesome/free-solid-svg-icons @fortawesome/fontawesome-svg-core
 The above line is the command to install FontAwesomeIcon - faPlayCircle, faFileAlt, faTimes.
 FontAwesomeIcon is used for the icons.
-faPlayCircle is for play button icon used in video modules.
-faFileAlt is for file symbol icon used in the article modules.
+faPlayCircle is for play button icon used in video resource grids.
+faFileAlt is for file symbol icon used in the article resource grids.
 faTimes is for "cross" mark used to close the modal opened for the video.
 npm start is the command for executing the code.
