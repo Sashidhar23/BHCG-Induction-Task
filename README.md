@@ -6,8 +6,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ### Node.js & `npm install`
 
 I used node.js for the task.
-npm create vite@latest Tech --template react
-cd Tech
+npm create vite@latest App --template react
+cd App
 npm install
 This is the command to install the React.
 npm install @fortawesome/react-fontawesome @fortawesome/free-solid-svg-icons @fortawesome/fontawesome-svg-core
