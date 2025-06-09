@@ -3,11 +3,11 @@ import './App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlayCircle, faFileAlt, faTimes } from '@fortawesome/free-solid-svg-icons';
 
-const App = () => {
-  const [modulesData] = useState({
+ 
+ /* const [modulesData] = useState({
     "Week 1 - DC Machines": [
       { title: "Introduction to Electric Motors", type: "article", url: "https://www.electricaltechnology.org/2020/04/dc-machine-types-working-applications.html" },
-      { title: "DC Motors", type: "video", url: "https://www.youtube.com/embed/CWulQ1ZSE3c" },
+      { title: "DC Motors", type: "video", url: "https://www.youtube.com/embed/CWulQ1ZSE3c" }, 
       { title: "DC Generators", type: "video", url: "https://www.youtube.com/embed/mq2zjmS8UMI" }
     ],
     "Week 2 - Induction Machines": [
@@ -21,7 +21,57 @@ const App = () => {
       { title: "Synchronous Motor", type: "video", url: "https://www.youtube.com/embed/Tk3lNBSAgEg" },
       { title: "Alternator", type: "video", url: "https://www.youtube.com/embed/tiKH48EMgKE" },
     ]
-  });
+  })*/
+  const courseData = [
+  {
+    week: 'Week 1 - DC Machines',
+    resources: [
+      { title: 'Introduction to Electric Motors', type: 'Article' , url: "https://www.electricaltechnology.org/2020/04/dc-machine-types-working-applications.html"},
+      { title: 'DC Motors', type: 'Video' },
+      { title: 'DC Generators', type: 'Video' },
+    ],
+  },
+  {
+    week: 'Week 2 - Induction Machines',
+    resources: [
+      { title: 'Introduction to Induction Machines', type: 'Article' },
+      { title: 'Induction Motor', type: 'Video' },
+      { title: 'Asynchronous Generator', type: 'Article' },
+    ],
+  },
+];
+
+function ElectricMachines() {
+  return (
+    <div className="container">
+      <h1>Electric Machines</h1>
+      {courseData.map((weekData, index) => (
+        <div key={index} className="week-section">
+          <h2>{weekData.week}</h2>
+          <table className="resource-table">
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Type</th>
+              </tr>
+            </thead>
+            <tbody>
+              {weekData.resources.map((resource, idx) => (
+                <tr key={idx}>
+                  <td>{resource.title}</td>
+                  <td>{resource.type}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      ))}
+    </div>
+  );
+
+
+
+
 
   const [modalOpen, setModalOpen] = useState(false);
   const [currentVideo, setCurrentVideo] = useState({ title: '', url: '' });
@@ -44,38 +94,7 @@ const App = () => {
     }
   };
 
-  return (
-    <div className="app">
-      <div className="container">
-        <h1>Electric Machines</h1>
-        <div className="modules-container">
-          {Object.entries(modulesData).map(([moduleName, resources]) => (
-            <div className="module" key={moduleName}>
-              <div className="module-header">{moduleName}</div>
-              <div className="resources-grid">
-                {resources.map((resource, index) => (
-                  <div
-                    className={`resource-card ${resource.type}`}
-                    key={`${moduleName}-${index}`}
-                    onClick={() => handleResourceClick(resource)}
-                  >
-                    <FontAwesomeIcon
-                      icon={resource.type === 'video' ? faPlayCircle : faFileAlt}
-                      className="resource-icon"
-                    />
-                    <div className="resource-info">
-                      <div className="resource-title">{resource.title}</div>
-                      <div className="resource-type">
-                        {resource.type.charAt(0).toUpperCase() + resource.type.slice(1)}
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
+  
 
       {/* Video Modal */}
       {modalOpen && (
@@ -94,9 +113,9 @@ const App = () => {
             </div>
           </div>
         </div>
-      )}
-    </div>
+      
   );
 };
-
-export default App;
+};
+export default ElectricMachines;
+//export default App;

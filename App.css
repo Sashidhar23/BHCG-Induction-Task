@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f5f9fa;
-  color: #333;
+  color: #ffffff;
   background: 
     radial-gradient(circle at center, rgba(255, 255, 255, .3) 0%, rgba(0, 0, 0, 0) 95%),
     url('Bgimage9.jpeg');
@@ -56,44 +56,37 @@ h1 {
   padding: 20px;
 }
 
-.resource-card {
-  border: 1px solid #e0e0e0;
-  border-radius: 6px;
-  padding: 15px;
-  cursor: pointer;
-  transition: all .5s ease;
-  display: flex;
-  align-items: center;
-  gap: 10px;
+.container {
+  padding: 20px;
+  font-family: sans-serif;
 }
 
-.resource-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-color: #3498db;
+.week-section {
+  margin-bottom: 30px;
 }
 
-.resource-card.video {
-  border-left: 4px solid #2e3ecc;
-  background-color: #ffffff
+.resource-table {
+  width: 100%;
+  border-collapse: collapse;
 }
 
-.resource-card.article {
-  border-left: 4px solid #2e3ecc;
-  background-color: #ffffff;
+.resource-table th,
+.resource-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.resource-table th {
+  background-color: #007bff;
+  color: white;
+  text-align: left;
 }
 
 .resource-icon {
   font-size: 1.3rem;
 }
 
-.resource-card.video .resource-icon {
-  color: #2eb7cc;
-}
 
-.resource-card.article .resource-icon {
-  color: #2eb7cc;
-}
 
 .resource-info {
   flex-grow: 1;
@@ -102,6 +95,7 @@ h1 {
 .resource-title {
   font-weight: 500;
   margin-bottom: 5px;
+  color :rgb(255, 255, 255)
 }
 
 .resource-type {
